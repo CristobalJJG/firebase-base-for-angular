@@ -1,0 +1,30 @@
+<section>
+    <form #form="ngForm">
+        {{ form.value | json }} 
+        <br/>
+        <mat-form-field >
+            <mat-label>Email</mat-label>
+            <input matInput 
+            type="email" 
+            placeholder="Email" 
+            name="email" 
+            ngModel 
+            (keyup)="updateData(form)">
+        </mat-form-field>
+        <br/>
+        <mat-form-field >
+            <mat-label>Contraseña</mat-label>
+            <input 
+            matInput 
+            type="password" 
+            placeholder="Contraseña" 
+            name="password"
+            ngModel 
+            (keyup)="updateData(form)"/>
+        </mat-form-field>
+    </form>
+    @if(error!=''){
+        <span>{{error}}</span><br/>
+    }
+    <button mat-flat-button (click)="register(form)" [disabled]="btnDisabled">Hola</button>
+</section>
