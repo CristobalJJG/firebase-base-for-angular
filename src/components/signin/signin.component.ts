@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 /* Components */
-import {MatButtonModule} from '@angular/material/button';
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { SignoutComponent } from '@c/signout/signout.component';
 /* Services */
 import { SigninService } from '@s/auth/signin.service';
 /* Firebase */
@@ -13,7 +14,8 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-signin',
   imports: [MatButtonModule, MatFormFieldModule, MatInputModule,
-    FormsModule, CommonModule],
+    FormsModule, CommonModule, SignoutComponent],
+  
   templateUrl: './signin.component.html',
   styleUrl: './signin.component.css'
 })

@@ -1,1 +1,4 @@
-<p>signout works!</p>
+<button mat-stroked-button (click)="signout()">Cerrar sesion</button>
+@if(error!=''){
+    <span>{{error}}</span><br/>
+}
